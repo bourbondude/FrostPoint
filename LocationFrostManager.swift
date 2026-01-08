@@ -74,7 +74,7 @@ class LocationFrostManager: NSObject, ObservableObject, CLLocationManagerDelegat
     }
     
     // MARK: - Reverse Geocoding with iOS 26 MapKit
-    private func fetchLocationName(from location: CLLocation) async {
+    func fetchLocationName(from location: CLLocation) async {
         do {
             guard let request = MKReverseGeocodingRequest(location: location) else {
                 self.locationName = "Unknown Location"
