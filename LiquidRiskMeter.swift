@@ -8,6 +8,7 @@ struct FrostRiskView: View {
     
     @State private var pulseAnimation = false
     @State private var showSettings = false
+    @State private var showLocationSearch = false
     
     var body: some View {
         GeometryReader { geo in
@@ -58,32 +59,36 @@ struct FrostRiskView: View {
                         }
                         
                         Spacer()
-                        
-                        // Location
-                        HStack(spacing: 4) {
-                            Image(systemName: "location.fill")
-                            Text(locationName)
-                                .fontWeight(.medium)
+
+                        // Location - Tappable
+                        Button(action: {
+                            showLocationSearch.toggle()
+                        }) {
+                            HStack(spacing: 4) {
+                                Image(systemName: "location.fill")
+                                Text(locationName)
+                                    .fontWeight(.medium)
+                            }
+                            .font(.subheadline)
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 8)
+                            .background(.ultraThinMaterial)
+                            .clipShape(Capsule())
+                            .overlay(
+                                Capsule()
+                                    .stroke(
+                                        LinearGradient(
+                                            colors: [Color.white.opacity(0.3), Color.clear],
+                                            startPoint: .top,
+                                            endPoint: .bottom
+                                        ),
+                                        lineWidth: 1
+                                    )
+                            )
+                            .shadow(color: .black.opacity(0.2), radius: 8, x: 0, y: 4)
                         }
-                        .font(.subheadline)
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 8)
-                        .background(.ultraThinMaterial)
-                        .clipShape(Capsule())
-                        .overlay(
-                            Capsule()
-                                .stroke(
-                                    LinearGradient(
-                                        colors: [Color.white.opacity(0.3), Color.clear],
-                                        startPoint: .top,
-                                        endPoint: .bottom
-                                    ),
-                                    lineWidth: 1
-                                )
-                        )
-                        .shadow(color: .black.opacity(0.2), radius: 8, x: 0, y: 4)
-                        
+
                         Spacer()
                         
                         // Balance spacer
@@ -258,6 +263,11 @@ struct FrostRiskView: View {
         .ignoresSafeArea()
         .sheet(isPresented: $showSettings) {
             SettingsView(frostManager: frostManager, isPresented: $showSettings)
+                .presentationDetents([.large])
+                .presentationDragIndicator(.visible)
+        }
+        .sheet(isPresented: $showLocationSearch) {
+            LocationSearchView(frostManager: frostManager)
                 .presentationDetents([.large])
                 .presentationDragIndicator(.visible)
         }
