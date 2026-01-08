@@ -6,6 +6,18 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FAE39EFE2F0C934C00DFA2D2 /* FrostLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE39EFD2F0C934100DFA2D2 /* FrostLogic.swift */; };
+		FAE39F002F0C940500DFA2D2 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE39EFF2F0C93FA00DFA2D2 /* DesignSystem.swift */; };
+		FAE39F042F0C94BB00DFA2D2 /* LiquidRiskMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE39F032F0C94BB00DFA2D2 /* LiquidRiskMeter.swift */; };
+		FAE39F142F0CAB5200DFA2D2 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE39F132F0CAB5200DFA2D2 /* Launch Screen.storyboard */; };
+		FAE39F182F0CCA9100DFA2D2 /* LocationFrostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE39F172F0CCA9100DFA2D2 /* LocationFrostManager.swift */; };
+		FAE39F1A2F0CD41800DFA2D2 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE39F192F0CD41800DFA2D2 /* NotificationManager.swift */; };
+		FAE39F1C2F0CD43700DFA2D2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE39F1B2F0CD43700DFA2D2 /* SettingsView.swift */; };
+		FAE39F202F0DDC6E00DFA2D2 /* LocationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE39F1F2F0DDC6E00DFA2D2 /* LocationStorage.swift */; };
+		FAE39F222F0DDC8E00DFA2D2 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE39F212F0DDC8E00DFA2D2 /* LocationSearchView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		FAE39EE12F0C92C200DFA2D2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +39,33 @@
 		FAE39ED32F0C92C100DFA2D2 /* FrostPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrostPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE39EE02F0C92C200DFA2D2 /* FrostPointTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrostPointTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE39EEA2F0C92C200DFA2D2 /* FrostPointUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrostPointUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE39EFD2F0C934100DFA2D2 /* FrostLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrostLogic.swift; sourceTree = "<group>"; };
+		FAE39EFF2F0C93FA00DFA2D2 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		FAE39F032F0C94BB00DFA2D2 /* LiquidRiskMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquidRiskMeter.swift; sourceTree = "<group>"; };
+		FAE39F132F0CAB5200DFA2D2 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FAE39F172F0CCA9100DFA2D2 /* LocationFrostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFrostManager.swift; sourceTree = "<group>"; };
+		FAE39F192F0CD41800DFA2D2 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		FAE39F1B2F0CD43700DFA2D2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FAE39F1F2F0DDC6E00DFA2D2 /* LocationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationStorage.swift; sourceTree = "<group>"; };
+		FAE39F212F0DDC8E00DFA2D2 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FAE39F1E2F0CD61800DFA2D2 /* Exceptions for "FrostPoint" folder in "FrostPoint" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FAE39ED22F0C92C100DFA2D2 /* FrostPoint */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		FAE39ED52F0C92C100DFA2D2 /* FrostPoint */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FAE39F1E2F0CD61800DFA2D2 /* Exceptions for "FrostPoint" folder in "FrostPoint" target */,
+			);
 			path = FrostPoint;
 			sourceTree = "<group>";
 		};
@@ -75,6 +109,15 @@
 		FAE39ECA2F0C92C100DFA2D2 = {
 			isa = PBXGroup;
 			children = (
+				FAE39F172F0CCA9100DFA2D2 /* LocationFrostManager.swift */,
+				FAE39F192F0CD41800DFA2D2 /* NotificationManager.swift */,
+				FAE39F1B2F0CD43700DFA2D2 /* SettingsView.swift */,
+				FAE39F132F0CAB5200DFA2D2 /* Launch Screen.storyboard */,
+				FAE39F032F0C94BB00DFA2D2 /* LiquidRiskMeter.swift */,
+				FAE39F1F2F0DDC6E00DFA2D2 /* LocationStorage.swift */,
+				FAE39F212F0DDC8E00DFA2D2 /* LocationSearchView.swift */,
+				FAE39EFF2F0C93FA00DFA2D2 /* DesignSystem.swift */,
+				FAE39EFD2F0C934100DFA2D2 /* FrostLogic.swift */,
 				FAE39ED52F0C92C100DFA2D2 /* FrostPoint */,
 				FAE39EE32F0C92C200DFA2D2 /* FrostPointTests */,
 				FAE39EED2F0C92C200DFA2D2 /* FrostPointUITests */,
@@ -212,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE39F142F0CAB5200DFA2D2 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +280,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE39F042F0C94BB00DFA2D2 /* LiquidRiskMeter.swift in Sources */,
+				FAE39F1C2F0CD43700DFA2D2 /* SettingsView.swift in Sources */,
+				FAE39F202F0DDC6E00DFA2D2 /* LocationStorage.swift in Sources */,
+				FAE39F222F0DDC8E00DFA2D2 /* LocationSearchView.swift in Sources */,
+				FAE39F002F0C940500DFA2D2 /* DesignSystem.swift in Sources */,
+				FAE39F1A2F0CD41800DFA2D2 /* NotificationManager.swift in Sources */,
+				FAE39EFE2F0C934C00DFA2D2 /* FrostLogic.swift in Sources */,
+				FAE39F182F0CCA9100DFA2D2 /* LocationFrostManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +452,8 @@
 				DEVELOPMENT_TEAM = Z4XC4986PU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FrostPoint/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Required to calculate local frost probability.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -432,6 +486,8 @@
 				DEVELOPMENT_TEAM = Z4XC4986PU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FrostPoint/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Required to calculate local frost probability.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
