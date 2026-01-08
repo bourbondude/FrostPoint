@@ -40,13 +40,26 @@ struct SavedLocation: Identifiable, Codable, Equatable {
     }
 }
 
+extension SavedLocation {
+    static func == (lhs: SavedLocation, rhs: SavedLocation) -> Bool {
+        lhs.id == rhs.id &&
+        lhs.name == rhs.name &&
+        lhs.coordinate.latitude == rhs.coordinate.latitude &&
+        lhs.coordinate.longitude == rhs.coordinate.longitude &&
+        lhs.timestamp == rhs.timestamp
+    }
+}
+
 // MARK: - Location Storage Manager
+@Observable
 @MainActor
-class LocationStorageManager: ObservableObject {
-    @Published var recentLocations: [SavedLocation] = []
-    
+class LocationStorageManager {
+    @ObservationIgnored
     private let maxRecent = 3
+    @ObservationIgnored
     private let storageKey = "recentLocations"
+    
+    var recentLocations: [SavedLocation] = []
     
     init() {
         loadRecentLocations()
@@ -82,4 +95,6 @@ class LocationStorageManager: ObservableObject {
     
     func clearHistory() {
         recentLocations.removeAll()
-        UserDefaults.standard.
+        UserDefaults.standard.removeObject(forKey: storageKey)
+    }
+}

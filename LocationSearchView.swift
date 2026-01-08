@@ -3,7 +3,7 @@ import MapKit
 
 struct LocationSearchView: View {
     @Environment(\.dismiss) var dismiss
-    @StateObject private var locationStorage = LocationStorageManager()
+    @State private var locationStorage = LocationStorageManager()
     @ObservedObject var frostManager: LocationFrostManager
     
     @State private var searchText = ""
@@ -170,3 +170,4 @@ struct LocationSearchView: View {
         dismiss()
     }
 }
+

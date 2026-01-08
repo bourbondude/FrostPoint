@@ -57,7 +57,7 @@ class LocationFrostManager: NSObject, ObservableObject, CLLocationManagerDelegat
     }
     
     // MARK: - Fetch Frost Data
-    private func fetchFrostData(for location: CLLocation) async {
+    func fetchFrostData(for location: CLLocation) async {
         print("🔍 LocationFrostManager: Starting to fetch frost data...")
         do {
             print("📍 Location: \(location.coordinate.latitude), \(location.coordinate.longitude)")
