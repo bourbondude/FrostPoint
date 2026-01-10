@@ -62,6 +62,7 @@ struct FrostRiskView: View {
 
                         // Location - Tappable
                         Button(action: {
+                            print("🔍 Location button tapped!")
                             showLocationSearch.toggle()
                         }) {
                             HStack(spacing: 4) {
@@ -88,6 +89,7 @@ struct FrostRiskView: View {
                             )
                             .shadow(color: .black.opacity(0.2), radius: 8, x: 0, y: 4)
                         }
+                        .buttonStyle(.plain)
 
                         Spacer()
                         
